@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mécacycle — Vente, réparation et électrification de vélos à Sedan (08)</title>
+<meta name="description" content="Mécacycle, 17 faubourg du Ménil à Sedan : réparation de vélos toutes marques, entretien, électrification, trottinettes électriques et vélos d'occasion. Arnaud De Boni, 06 86 91 49 51.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Heebo:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bleu:#2E63F0; --bleu-cl:#6B96FF; --bleu-f:#1536A8; --bleu-pale:#E8EEFF;
+  --lime:#CBE432; --lime-f:#8E9F00;
+  --nuit:#101218; --nuit-2:#171A22; --ardoise:#2C333C;
+  --craie:#F7F6F3; --craie-2:#EDEBE5; --craie-3:#DBD8CF;
+  --encre:#15171C; --encre-2:#565B66; --encre-3:#8B909B;
+  --r:14px; --maxw:1200px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0; background:var(--craie); color:var(--encre);
+  font-family:'Heebo',system-ui,-apple-system,'Segoe UI',sans-serif;
+  font-size:17px; line-height:1.65; -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%; display:block}
+a{color:inherit}
+.wrap{width:100%; max-width:var(--maxw); margin:0 auto; padding:0 24px}
+.dsp{font-family:'Teko',Impact,'Heebo',sans-serif; font-weight:600; text-transform:uppercase; line-height:.95; letter-spacing:.012em}
+
+/* ---------- header ---------- */
+header{position:sticky; top:0; z-index:60; background:rgba(16,18,24,.94); backdrop-filter:blur(10px); border-bottom:1px solid rgba(255,255,255,.1)}
+.hd{display:flex; align-items:center; gap:22px; height:72px}
+.brand{display:flex; align-items:center; gap:11px; text-decoration:none; color:#fff; flex:0 0 auto}
+.brand svg{width:30px; height:30px; color:var(--bleu-cl); flex:0 0 auto}
+.brand b{font-family:'Teko',sans-serif; font-weight:600; font-size:31px; letter-spacing:.055em; text-transform:uppercase; line-height:1; display:block}
+.brand small{display:block; font-size:10.5px; letter-spacing:.3em; text-transform:uppercase; color:var(--bleu-cl); font-weight:500; margin-top:-2px}
+nav{margin-left:auto; display:flex; gap:26px}
+nav a{color:#D7DAE3; text-decoration:none; font-size:14.5px; font-weight:400; letter-spacing:.015em}
+nav a:hover{color:var(--lime)}
+.tel{display:inline-flex; align-items:center; gap:8px; background:var(--bleu); color:#fff; text-decoration:none;
+  padding:11px 18px; border-radius:999px; font-weight:700; font-size:15px; white-space:nowrap}
+.tel:hover{background:var(--bleu-cl)}
+.burger{display:none}
+
+/* ---------- hero ---------- */
+.hero{background:var(--nuit); color:#fff; padding:66px 0 72px; position:relative; overflow:hidden}
+.hero::before{content:""; position:absolute; inset:auto -10% -45% 40%; height:420px; background:radial-gradient(closest-side,rgba(46,99,240,.42),transparent 72%); pointer-events:none}
+.hgrid{display:grid; grid-template-columns:1.05fr .95fr; gap:52px; align-items:center; position:relative}
+.over{display:inline-block; font-size:12px; font-weight:700; letter-spacing:.24em; text-transform:uppercase; color:var(--lime); margin-bottom:18px}
+.hero h1{margin:0 0 20px; font-size:clamp(2.9rem,6.2vw,4.6rem); color:#fff}
+.hero h1 em{font-style:normal; color:var(--bleu-cl)}
+.lead{font-size:18px; color:#C8CCD6; font-weight:300; margin:0 0 28px; max-width:46ch}
+.cta{display:flex; flex-wrap:wrap; gap:12px; margin-bottom:28px}
+.btn{display:inline-flex; align-items:center; gap:9px; padding:14px 24px; border-radius:999px; text-decoration:none;
+  font-weight:700; font-size:15.5px; border:2px solid transparent}
+.btn-p{background:var(--lime); color:var(--nuit)}
+.btn-p:hover{background:#DCF24A}
+.btn-s{border-color:rgba(255,255,255,.28); color:#fff}
+.btn-s:hover{border-color:var(--lime); color:var(--lime)}
+.facts{display:flex; flex-wrap:wrap; gap:9px}
+.fact{font-size:12.5px; font-weight:500; letter-spacing:.03em; padding:7px 13px; border-radius:999px;
+  background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12); color:#D7DAE3}
+.fact b{color:#fff}
+.hshot{position:relative}
+.hshot img{width:100%; border-radius:var(--r); box-shadow:0 26px 60px rgba(0,0,0,.5)}
+.hshot figcaption{margin-top:11px; font-size:12.5px; color:#9AA0AD}
+
+/* ---------- sections ---------- */
+section{padding:78px 0}
+.sec-head{max-width:62ch; margin-bottom:40px}
+.kicker{font-size:11.5px; font-weight:700; letter-spacing:.24em; text-transform:uppercase; color:var(--bleu); margin:0 0 12px}
+h2{margin:0 0 14px; font-size:clamp(2.1rem,3.7vw,3.05rem)}
+.sec-head p{margin:0; color:var(--encre-2); font-size:17px; font-weight:300}
+
+.grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+.card{background:#fff; border:1px solid var(--craie-3); border-radius:var(--r); padding:26px 24px 28px}
+.card .num{font-family:'Teko',sans-serif; font-weight:600; font-size:17px; letter-spacing:.14em; color:var(--bleu); display:block; margin-bottom:10px}
+.card h3{margin:0 0 9px; font-size:20px; font-weight:700; line-height:1.3}
+.card p{margin:0; color:var(--encre-2); font-size:15.5px; font-weight:300}
+
+/* tarifs */
+.tarifs{background:var(--ardoise); color:#fff}
+.tarifs .kicker{color:var(--lime)}
+.tarifs .sec-head p{color:#C3C8D2}
+.prices{display:grid; grid-template-columns:repeat(2,1fr); gap:20px}
+.price{background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.16); border-radius:var(--r); padding:32px 30px; display:flex; flex-direction:column}
+.price h3{margin:0 0 6px; font-size:19px; font-weight:500; color:#fff}
+.price .amount{font-family:'Teko',sans-serif; font-weight:600; font-size:62px; line-height:1; color:var(--lime)}
+.price p{margin:10px 0 0; font-size:14.5px; color:#B8BECA; font-weight:300}
+.note{margin-top:22px; font-size:14px; color:#AEB4C0; font-weight:300; max-width:68ch}
+
+/* galerie */
+.gal{display:grid; grid-template-columns:repeat(6,1fr); gap:16px}
+.gal figure{margin:0; grid-column:span 2; background:#fff; border:1px solid var(--craie-3); border-radius:var(--r); overflow:hidden}
+.gal figure.wide{grid-column:span 4}
+.gal img{width:100%; height:100%; object-fit:cover; aspect-ratio:4/3}
+.gal figure.wide img{aspect-ratio:16/9}
+.gal figcaption{padding:12px 15px; font-size:13.5px; color:var(--encre-2); font-weight:300}
+
+/* avis */
+.avis{background:var(--bleu-pale)}
+.avis-row{display:grid; grid-template-columns:repeat(3,1fr); gap:20px}
+.stat{background:#fff; border:1px solid #CDD9FA; border-radius:var(--r); padding:28px 24px; text-align:center}
+.stat .big{font-family:'Teko',sans-serif; font-weight:600; font-size:58px; line-height:1; color:var(--bleu-f)}
+.stat p{margin:8px 0 0; font-size:14.5px; color:var(--encre-2); font-weight:300}
+
+/* infos */
+.infos-grid{display:grid; grid-template-columns:1fr 1fr; gap:22px}
+.panel{background:#fff; border:1px solid var(--craie-3); border-radius:var(--r); padding:28px 26px}
+.panel h3{margin:0 0 16px; font-size:21px; font-weight:700}
+.dl{margin:0; display:grid; grid-template-columns:auto 1fr; gap:9px 18px; font-size:15.5px}
+.dl dt{color:var(--encre-3); font-weight:500}
+.dl dd{margin:0; font-weight:400}
+.hours{list-style:none; margin:0; padding:0; font-size:15.5px}
+.hours li{display:flex; justify-content:space-between; gap:16px; padding:9px 0; border-bottom:1px solid var(--craie-2)}
+.hours li:last-child{border-bottom:0}
+.hours b{font-weight:500}
+.hours .off{color:var(--encre-3)}
+.aconf{display:inline-block; margin-left:7px; font-size:10.5px; font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  background:#FFF1CE; color:#8A5A00; border:1px solid #F0D68E; border-radius:5px; padding:2px 6px; vertical-align:middle}
+.aconf-note{margin-top:16px; font-size:13.5px; color:var(--encre-2); font-weight:300; border-left:3px solid #F0D68E; padding-left:13px}
+
+/* contact */
+.contact{background:var(--nuit); color:#fff}
+.contact .kicker{color:var(--lime)}
+.cgrid{display:grid; grid-template-columns:1fr 1fr; gap:46px; align-items:start}
+.contact h2{color:#fff}
+.contact .sec-head p{color:#C3C8D2}
+.clist{list-style:none; margin:0; padding:0; display:grid; gap:14px}
+.clist a{color:#fff; text-decoration:none; display:flex; gap:14px; align-items:flex-start;
+  background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.14); border-radius:var(--r); padding:17px 20px}
+.clist a:hover{border-color:var(--lime)}
+.clist span.lbl{display:block; font-size:11.5px; letter-spacing:.17em; text-transform:uppercase; color:var(--bleu-cl); font-weight:700; margin-bottom:3px}
+.clist strong{font-size:18px; font-weight:500}
+.cshot img{border-radius:var(--r); width:100%}
+.cshot figcaption{margin-top:11px; font-size:12.5px; color:#9AA0AD}
+
+/* footer */
+footer{background:#0A0C11; color:#8B909B; padding:40px 0 56px; font-size:14px}
+.fgrid{display:flex; flex-wrap:wrap; gap:20px; align-items:center; justify-content:space-between}
+footer a{color:#C8CCD6}
+.fbrand{font-family:'Teko',sans-serif; font-weight:600; font-size:26px; letter-spacing:.055em; color:#fff; text-transform:uppercase; line-height:1}
+
+/* badge démo */
+.demo{position:fixed; right:16px; bottom:16px; z-index:90; display:inline-flex; align-items:center; gap:8px;
+  background:var(--nuit); color:#fff; border:1px solid rgba(255,255,255,.22); border-radius:999px;
+  padding:9px 15px; font-size:12.5px; font-weight:700; letter-spacing:.07em; text-decoration:none; box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.demo i{width:7px; height:7px; border-radius:50%; background:var(--lime); display:inline-block}
+.demo:hover{border-color:var(--lime)}
+
+/* ---------- responsive ---------- */
+@media(max-width:1000px){
+  .hgrid{grid-template-columns:1fr; gap:36px}
+  .grid3{grid-template-columns:repeat(2,1fr)}
+  .cgrid{grid-template-columns:1fr; gap:34px}
+  .gal figure, .gal figure.wide{grid-column:span 3}
+}
+@media(max-width:760px){
+  nav{display:none}
+  .infos-grid{grid-template-columns:1fr}
+  .avis-row{grid-template-columns:1fr}
+  .prices{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  section{padding:56px 0}
+  .hd{height:64px; gap:12px}
+  .brand b{font-size:26px}
+  .brand small{font-size:9px; letter-spacing:.22em}
+  .brand svg{width:25px; height:25px}
+  .tel{padding:9px 14px; font-size:14px}
+  .grid3{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr}
+  .gal figure, .gal figure.wide{grid-column:span 1}
+  .hero{padding:48px 0 54px}
+  .demo{right:10px; bottom:10px; padding:8px 12px; font-size:11.5px}
+}
+@media(max-width:400px){
+  .brand small{display:none}
+  .tel{padding:9px 12px; font-size:13.5px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hd">
+    <a class="brand" href="#top">
+      <svg viewBox="0 0 64 64" fill="none" aria-hidden="true">
+        <circle cx="32" cy="32" r="21" stroke="currentColor" stroke-width="4"/>
+        <circle cx="32" cy="32" r="7.5" stroke="currentColor" stroke-width="4"/>
+        <g stroke="currentColor" stroke-width="4" stroke-linecap="round">
+          <path d="M32 10.5V3"/><path d="M32 61v-7.5"/><path d="M53.5 32H61"/><path d="M3 32h7.5"/>
+          <path d="M47.2 16.8l5.3-5.3"/><path d="M11.5 52.5l5.3-5.3"/><path d="M47.2 47.2l5.3 5.3"/><path d="M11.5 11.5l5.3 5.3"/>
+        </g>
+      </svg>
+      <span><b>Mécacycle</b><small>Sedan</small></span>
+    </a>
+    <nav>
+      <a href="#services">Services</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#atelier">L'atelier</a>
+      <a href="#infos">Infos pratiques</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="tel" href="tel:+33686914951">06 86 91 49 51</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hgrid">
+    <div>
+      <span class="over">Vente · Réparation · Électrification · Sedan (08)</span>
+      <h1 class="dsp">Votre vélo réparé<br><em>toutes marques</em>,<br>à Sedan.</h1>
+      <p class="lead">Arnaud De Boni entretient, répare et électrifie vélos, trottinettes électriques et draisiennes au 17 faubourg du Ménil, à quelques pas du centre-ville.</p>
+      <div class="cta">
+        <a class="btn btn-p" href="tel:+33686914951">Appeler l'atelier</a>
+        <a class="btn btn-s" href="mailto:deboni08@hotmail.fr">Écrire un mail</a>
+      </div>
+      <div class="facts">
+        <span class="fact"><b>4,6 / 5</b> sur 33 avis Google</span>
+        <span class="fact">Atelier ouvert depuis <b>2019</b></span>
+        <span class="fact">Chèques &amp; carte bancaire</span>
+        <span class="fact">Animaux bienvenus</span>
+      </div>
+    </div>
+    <figure class="hshot" style="margin:0">
+      <img src="devanture.jpg" width="900" height="800" alt="La devanture de Mécacycle, 17 faubourg du Ménil à Sedan, avec son enseigne néon bleue">
+      <figcaption>17 faubourg du Ménil, 08200 Sedan.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Ce que fait l'atelier</p>
+      <h2 class="dsp">Réparation, entretien, électrification</h2>
+      <p>Vélos de ville, VTT, vélos de route, vélos d'enfant, trottinettes électriques et draisiennes : tout passe à l'atelier du faubourg du Ménil.</p>
+    </div>
+    <div class="grid3">
+      <article class="card">
+        <span class="num dsp">01</span>
+        <h3>Réparation toutes marques</h3>
+        <p>Freins, transmission, roues, crevaisons : votre vélo est pris en charge quelle que soit sa marque.</p>
+      </article>
+      <article class="card">
+        <span class="num dsp">02</span>
+        <h3>Nettoyage &amp; entretien</h3>
+        <p>Deux forfaits d'entretien au tarif affiché, du nettoyage complet à la révision approfondie.</p>
+      </article>
+      <article class="card">
+        <span class="num dsp">03</span>
+        <h3>Électrification</h3>
+        <p>Transformation de votre vélo classique en vélo à assistance électrique.<span class="aconf">à confirmer</span></p>
+      </article>
+      <article class="card">
+        <span class="num dsp">04</span>
+        <h3>Trottinettes &amp; draisiennes</h3>
+        <p>Réparation de crevaisons et remise en état des trottinettes électriques et des draisiennes.</p>
+      </article>
+      <article class="card">
+        <span class="num dsp">05</span>
+        <h3>Vélos d'occasion</h3>
+        <p>Achat, vente et reprise de vélos d'occasion, révisés à l'atelier avant d'être remis en vente.<span class="aconf">à confirmer</span></p>
+      </article>
+      <article class="card">
+        <span class="num dsp">06</span>
+        <h3>Pièces &amp; accessoires</h3>
+        <p>Pneus, chambres à air, selles, poignées, éclairage, antivols, transmission : la boutique est fournie sur place.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="tarifs" class="tarifs">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Tarifs affichés</p>
+      <h2 class="dsp">Les deux forfaits d'entretien</h2>
+      <p>Les forfaits sont annoncés à l'avance : vous savez ce que vous payez avant de déposer le vélo.</p>
+    </div>
+    <div class="prices">
+      <article class="price">
+        <h3>Forfait nettoyage entretien</h3>
+        <div class="amount dsp">35 €</div>
+        <p>Nettoyage complet et entretien courant du vélo.</p>
+      </article>
+      <article class="price">
+        <h3>Forfait nettoyage entretien approfondi</h3>
+        <div class="amount dsp">50 €</div>
+        <p>Nettoyage et révision plus poussés de l'ensemble du vélo.</p>
+      </article>
+    </div>
+    <p class="note">Tarifs publiés sur la fiche de l'office de tourisme Charleville&nbsp;/&nbsp;Sedan, donnés à titre indicatif. Les réparations hors forfait et les pièces sont chiffrées à l'atelier.</p>
+  </div>
+</section>
+
+<section id="atelier">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">L'atelier</p>
+      <h2 class="dsp">Un magasin, un atelier, des pièces en stock</h2>
+      <p>Les vélos à réparer, les vélos à vendre et les pièces détachées sont au même endroit : vous repartez souvent avec la solution le jour même.</p>
+    </div>
+    <div class="gal">
+      <figure class="wide">
+        <img src="atelier.jpg" width="1200" height="612" alt="L'intérieur du magasin Mécacycle avec les vélos en attente et le comptoir d'atelier">
+        <figcaption>Le magasin et l'atelier, faubourg du Ménil.</figcaption>
+      </figure>
+      <figure>
+        <img src="pneus.jpg" width="900" height="675" alt="Mur de pneus de vélo accrochés dans le magasin Mécacycle">
+        <figcaption>Pneus VTT, ville et route en stock.</figcaption>
+      </figure>
+      <figure>
+        <img src="accessoires.jpg" width="900" height="675" alt="Vitrine d'accessoires : sacoches, antivols, éclairages et produits d'entretien">
+        <figcaption>Sacoches, antivols, éclairage, entretien.</figcaption>
+      </figure>
+      <figure>
+        <img src="selles.jpg" width="900" height="675" alt="Présentoir de selles, poignées et pompes à pied">
+        <figcaption>Selles, poignées, pompes.</figcaption>
+      </figure>
+      <figure>
+        <img src="vitrine.jpg" width="900" height="675" alt="Vitrine de pièces détachées : dérailleurs, cassettes, chaînes et disques de frein">
+        <figcaption>Dérailleurs, cassettes, chaînes, disques.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="avis">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Ce que disent les clients</p>
+      <h2 class="dsp">Une réputation déjà solide</h2>
+      <p>Les avis sont publics et vérifiables : la note et le nombre d'avis sont ceux affichés sur la fiche Google de l'atelier.</p>
+    </div>
+    <div class="avis-row">
+      <div class="stat"><div class="big">4,6</div><p>Note moyenne sur Google, sur 5</p></div>
+      <div class="stat"><div class="big">33</div><p>Avis déposés sur la fiche Google</p></div>
+      <div class="stat"><div class="big">451</div><p>Abonnés sur la page Facebook de l'atelier</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="infos">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Infos pratiques</p>
+      <h2 class="dsp">Venir à l'atelier</h2>
+    </div>
+    <div class="infos-grid">
+      <div class="panel">
+        <h3>Horaires<span class="aconf">à confirmer</span></h3>
+        <ul class="hours">
+          <li><b>Lundi</b><span>9 h – 13 h</span></li>
+          <li><b>Mardi</b><span>9 h – 13 h</span></li>
+          <li><b>Mercredi</b><span class="off">Fermé</span></li>
+          <li><b>Jeudi</b><span>9 h – 13 h</span></li>
+          <li><b>Vendredi</b><span>9 h – 13 h</span></li>
+          <li><b>Samedi</b><span>9 h – 13 h</span></li>
+          <li><b>Dimanche</b><span class="off">Fermé</span></li>
+        </ul>
+        <p class="aconf-note">Permanence annoncée le 31 octobre 2026 sur la page Facebook de l'atelier, à partir du lundi 2 novembre, avec des horaires indiqués comme variables. Les horaires 9 h – 12 h / 14 h – 18 h encore publiés sur la fiche de l'office de tourisme et sur Google ne correspondent donc plus. À confirmer avant mise en ligne.</p>
+      </div>
+      <div class="panel">
+        <h3>Adresse &amp; contact</h3>
+        <dl class="dl">
+          <dt>Adresse</dt><dd>17 faubourg du Ménil<br>08200 Sedan</dd>
+          <dt>Téléphone</dt><dd><a href="tel:+33686914951">06 86 91 49 51</a></dd>
+          <dt>Permanence</dt><dd><a href="tel:+33678823259">06 78 82 32 59</a><span class="aconf">à confirmer</span></dd>
+          <dt>E-mail</dt><dd><a href="mailto:deboni08@hotmail.fr">deboni08@hotmail.fr</a></dd>
+          <dt>Paiement</dt><dd>Chèques, carte bancaire</dd>
+          <dt>Sur place</dt><dd>Boutique · Animaux bienvenus</dd>
+        </dl>
+        <p class="aconf-note">Le second numéro est celui donné dans l'annonce Facebook du 31 octobre 2026 pour joindre l'atelier pendant la permanence.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Contact</p>
+      <h2 class="dsp">Un vélo à réparer ? Passez ou appelez.</h2>
+      <p>Le plus simple reste le téléphone : vous décrivez la panne, Arnaud vous dit quand déposer le vélo.</p>
+    </div>
+    <div class="cgrid">
+      <ul class="clist">
+        <li><a href="tel:+33686914951"><div><span class="lbl">Téléphone</span><strong>06 86 91 49 51</strong></div></a></li>
+        <li><a href="mailto:deboni08@hotmail.fr"><div><span class="lbl">E-mail</span><strong>deboni08@hotmail.fr</strong></div></a></li>
+        <li><a href="https://www.google.com/maps/place/MecaCycle/@49.6980601,4.9535602,17z" target="_blank" rel="noopener"><div><span class="lbl">Itinéraire</span><strong>17 faubourg du Ménil, 08200 Sedan</strong></div></a></li>
+      </ul>
+      <figure class="cshot" style="margin:0">
+        <img src="route.jpg" width="740" height="555" alt="Vélo de route noir en carbone passé à l'atelier Mécacycle">
+        <figcaption>Du vélo d'enfant au vélo de route : tout passe à l'atelier.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap fgrid">
+    <div>
+      <div class="fbrand">Mécacycle</div>
+      <p style="margin:7px 0 0">17 faubourg du Ménil, 08200 Sedan · 06 86 91 49 51</p>
+    </div>
+    <div style="text-align:right">
+      <p style="margin:0"><a href="mentions-legales.html">Mentions légales</a></p>
+      <p style="margin:7px 0 0">Arnaud De Boni · SIREN 878 107 556</p>
+    </div>
+  </div>
+</footer>
+
+<a class="demo" href="https://kraon.netlify.app/offre" target="_blank" rel="noopener"><i></i>Démo KRAON</a>
+
+</body>
+</html>
